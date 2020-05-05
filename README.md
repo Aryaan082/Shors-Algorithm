@@ -1,13 +1,16 @@
 # Shors Algorithm
-In this repositroy, I want to take the oppertunity to describe Shor's algorithm, and the understanding that I have gotten from the code. I'm going to describe major code blocks to describe how the circuit works.
+In this repositroy, I want to take the oppertunity to describe Shor's algorithm, and the basics for how it works. This is a brief overview of the algorithm. 
 
-This code is based on the paper called, "Circuit for Shor’s algorithm using 2n+3 qubits".
+There is some code in this repository and the code is based on the paper called, "Circuit for Shor’s algorithm using 2n+3 qubits".
 
-This is not my code. I was not able to write all the code for the algorithm by myself... it was too complicated. This code was not properly annotated and super confusing  so I will attempt to provide brief explanations for how it algorithm works.
+This is not my code. I was not able to write all the code for the algorithm by myself... it was too complicated. The code in this repository was the code I used to replicate Shor's algorithm on my jupyter notebook and I am sharing it so you can try it too!
 
-## Block 1
-This part just imports the files that will be needed for the circuit.
+# Problem
+RSA encryption is a method of encrypting messages provided two unique values for N and e. This encryption works by creating a 1-way function where encrypting is easy while decrypting becomes almost imposible. The securtiy is based on the exponentially hard problem called factorization which takes advantage of bit-based computational capabilities.
 
+By the way, this is a short description of the logic behind it which you can also check out in a [video](https://www.youtube.com/watch?v=zqS4w4SiJT0) I made. Check it out!
 
+## Preface
+As a preface, I guess I can start by defining a bunch of variable
 
-![alt text](images/Capture1.PNG)
+## Step 1
