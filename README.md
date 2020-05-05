@@ -14,8 +14,11 @@ By the way, this is a short description of the logic behind it which you can als
 As a preface, I can start by defining a bunch of variables:
 
 **N** = Public RSA encryptor
+
 **e** = Public RSA exponent
+
 **p** = RSA encryptor prime factor
+
 **q** = RSA encryptor prime factor
 
 ## Step 1
