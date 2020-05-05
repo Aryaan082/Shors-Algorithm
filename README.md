@@ -29,6 +29,6 @@ As a preface, I can start by defining a bunch of variables:
 
 **c** = Encrypted message
 
-There are a lot more but I will try to make this as easy to understand as possible.
+There are more but in trying to make this as easy to understand as possible, these variables are enough.
 
 ## Step 1
