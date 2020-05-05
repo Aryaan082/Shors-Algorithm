@@ -48,4 +48,13 @@ m = c<sup>d</sup> mod(N)
 
 But, its not so simple, finding d requires to know both prime factors of N, p and q. And for a computer, this is alomst impossible to compute in a limited time period with current RSA numbers like the hundreds of digit numbers for N.
 
+### Shor's Function
+The general function formula is:
+
+S(x) = a<sub>x</sub> mod(N)
+
+Now, lets use actual values for our example.
+When you sub in your own values for N and a it becomes:
+
+f(x) = 2<sub>x</sub> mod(15)
 ## Step 1
