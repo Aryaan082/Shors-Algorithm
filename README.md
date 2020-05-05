@@ -85,7 +85,7 @@ The first step is finding an integer a such that a < N. They have to be co-prime
 **a** = 2
 
 ## Step 2 - Quantum Step
-![alt text](images/Shor's-algorithm.jpg)
+![alt text](images/Shor's-Circuit.jpg)
 
 
 
