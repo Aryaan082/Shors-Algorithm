@@ -31,4 +31,9 @@ As a preface, I can start by defining a bunch of variables:
 
 There are more but in trying to make this as easy to understand as possible, these variables are enough.
 
+### Public key
+This is the key that is given to everyone, the values of both N and e. Anyone that wants to send a message is given these two pieces of information to encode m into c.
+
+The formula to get c is m^e mod(N)
+
 ## Step 1
