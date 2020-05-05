@@ -25,7 +25,7 @@ As a preface, I can start by defining a bunch of variables:
 
 **r** = Period of Shor's function function
 
-**m** = Sending message
+**m** = Message
 
 **c** = Encrypted message
 
@@ -53,8 +53,25 @@ The general function formula is:
 
 S(x) = a<sub>x</sub> mod(N)
 
-Now, lets use actual values for our example.
 When you sub in your own values for N and a it becomes:
 
 f(x) = 2<sub>x</sub> mod(15)
+
+### And Even More Prep
+
+Lets define the public keys and go through the RSA framework once.
+
+**N** = 15
+
+**e** = 4
+
+**m** = 11
+
+c = 15<sup>4</sup> mod(15)
+
+c = 1
+
+This is the message your computer would craft and send to something like a bank to decode. Now lets figure out how to intercept this message with a quantum computer and find the message for ourselves.
+
 ## Step 1
+
