@@ -21,7 +21,7 @@ As a preface, I can start by defining a bunch of variables:
 
 **q** = RSA encryptor prime factor
 
-**a** = Co-prime number to N, base for the exponent for Shor's function
+**a** = Co-prime number to N, base for the exponent for Shor's function (Random number less than N that shares only one other factor with N, 1)
 
 **r** = Period of Shor's function function
 
@@ -46,5 +46,6 @@ The formula to decrypt a message is given by:
 
 m = c<sup>d</sup> mod(N)
 
-But, its not so simple, finding d requires anyone trying to decode the message to know both prime factors of N, both p and q.
+But, its not so simple, finding d requires to know both prime factors of N, p and q. And for a computer, this is alomst impossible to compute in a limited time period with current RSA numbers like the hundreds of digit numbers for N.
+
 ## Step 1
