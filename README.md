@@ -87,7 +87,20 @@ The first step is finding an integer a such that a < N. They have to be co-prime
 ## Step 2 - Quantum Step
 ![alt text](images/Shor's-Circuit.jpg)
 
+This step can be brocken down into 3 more steps.
 
+### Part 1 - Hadamard Gates
+First we have to figure out how many qubits we need. We need to find log<sub>2</sub> N for our value of N. Then, 4*n+2 is how many qubits we need. We also need 2*n bits to hold all the information we measure off of the QFT. This means we use 18 qubits.
+
+The first portion of gates is pretty simple. You are just using Hadamard gates on all of the qubits in the top register, 2*n qubits or in our case 8 of our 18 qubits.
+
+### Part 2 - Phase Estimation
+This is the middle part of the circuit where there are a bunch of control unitary opperator gates. So, lets jump into a bit of math.
+
+Phi (φ), AKA Euler's totient function, is a greek letter that represents the "breakability of a number". The number of co-prime numbers to your original number. For prime numbers, the φ value is equal to the number minus 1. φ(7) = 7 - 1 = 6 (1, 2, 3, 4, 5, 6, ~~7~~).
+
+When we use this property with our number N, we know that it is made up of 2 prime numbers. This means the φ function is just 
+φ(N) = (p-1)(q-1) where p and q are just factors of N.
 
 
 
