@@ -6,4 +6,8 @@ This code is based on the paper called, "Circuit for Shor’s algorithm using 2n
 I was not able to write all the code for the algorithm by myself... because it was too complicated, so I replicated the code. I will attempt to provide a similar in brief understanding for how the algorithm works.
 
 ## Block 1
+This part just imports the files that will be needed for the circuit.
+
+
+
 ![alt text](images/Capture1.PNG)
