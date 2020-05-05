@@ -21,4 +21,14 @@ As a preface, I can start by defining a bunch of variables:
 
 **q** = RSA encryptor prime factor
 
+**a** = Co-prime number to N, base for the exponent for Shor's function
+
+**r** = Period of Shor's function function
+
+**m** = Sending message
+
+**c** = Encrypted message
+
+There are a lot more but I will try to make this as easy to understand as possible.
+
 ## Step 1
