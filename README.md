@@ -38,4 +38,10 @@ The formula to encrypt a message is given by:
 
 c = m<sup>e</sup> mod(N)
 
+This is the easy part of the one way function.
+
+The hard part is going backwards to find m. 
+
+m = c<sup>d</sup> mod(N)
+
 ## Step 1
