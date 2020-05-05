@@ -11,6 +11,11 @@ RSA encryption is a method of encrypting messages provided two unique values for
 By the way, this is a short description of the logic behind it which you can also check out in a [video](https://www.youtube.com/watch?v=zqS4w4SiJT0) I made. Check it out!
 
 ## Preface
-As a preface, I guess I can start by defining a bunch of variable
+As a preface, I can start by defining a bunch of variables:
+
+**N** = Public RSA encryptor
+**e** = Public RSA exponent
+**p** = RSA encryptor prime factor
+**q** = RSA encryptor prime factor
 
 ## Step 1
