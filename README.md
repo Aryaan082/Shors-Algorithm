@@ -65,6 +65,8 @@ Lets define the public keys and go through the RSA framework once.
 
 **e** = 4
 
+Private message: 
+
 **m** = 11
 
 c = 15<sup>4</sup> mod(15)
@@ -73,5 +75,30 @@ c = 1
 
 This is the message your computer would craft and send to something like a bank to decode. Now lets figure out how to intercept this message with a quantum computer and find the message for ourselves.
 
+These are the steps a computer would do to find the factors to decrypt the message.
+
+Lets assume the role of the hacker. We are only given the public information of N = 15 and e = 4.
+
 ## Step 1
+The first step is finding an integer a such that a < N. They have to be co-prime.
+
+**a** = 2
+
+## Step 2 - Quantum Step
+![alt text](images/Shor's-algorithm.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
