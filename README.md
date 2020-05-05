@@ -34,6 +34,6 @@ There are more but in trying to make this as easy to understand as possible, the
 ### Public key
 This is the key that is given to everyone, the values of both N and e. Anyone that wants to send a message is given these two pieces of information to encode m into c.
 
-The formula to get c is m^e mod(N)
+The formula to get c is m<sup>e</sup> mod(N)
 
 ## Step 1
