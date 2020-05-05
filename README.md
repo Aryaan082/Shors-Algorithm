@@ -42,6 +42,9 @@ This is the easy part of the one way function.
 
 The hard part is going backwards to find m. 
 
+The formula to decrypt a message is given by:
+
 m = c<sup>d</sup> mod(N)
 
+But, its not so simple, finding d requires anyone trying to decode the message to know both prime factors of N, both p and q.
 ## Step 1
