@@ -105,6 +105,12 @@ This is a probabilistic algorithm which gives a correct answer with high probabi
 
 Using the function, f(x) = 2<sup>x</sup> mod(15), you are given a periodic graph.
 
+![alt text](images/Shor's-Graph.PNG)
+
+
+
+
+
 
 
 
