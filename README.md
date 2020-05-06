@@ -196,4 +196,4 @@ And once again, there we have it. We have successfully managed to interfere with
 Making this problem into a period finding problem rather than a straight up factoring problem lies in the genius of this solution that Peter Shor came up with. Using the quantum technology to solve what current computers are unable to solve is what makes this algorithm so cool and much better than current methods.
 
 
-If you are interested in how to recreate this 
+If you are interested in how to recreate this on a quantum computer, check out the code in the resources tab and chck out my other repositories if you are interested! Thanks 😊.
