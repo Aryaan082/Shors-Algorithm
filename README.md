@@ -107,7 +107,60 @@ Using the function, f(x) = 2<sup>x</sup> mod(15), you are given a periodic graph
 
 ![alt text](images/Shor's-Graph.PNG)
 
+Given a graph of the periodic function, we can go onto the next part.
 
+### Part 3 - Quantum Fourier Transform
+To make it simple. The QFT or quantum Fourier Transform is a linear transformation applied to qubits. It is a subroutine used in many algorithms like phase estimation and it helps by applying the discrete Fourier transform to a more complex vector space.
+
+To make it as simple as possible, the QFT helps find a value related to the period of a given function to efficiently find it. When we use the QFT on our value for the graphs above, just think of it figuring out the period of the function. Period r = 4.
+
+### Part 4 - Measure
+In this part, the final states are measured after the QFT and we are basically given the period which is the hardest part.
+
+## Step 3
+If the period r is odd, restart and go to **Step 1**. Find a new **a** value.
+If the period r is even, go to **Step 4**.
+
+## Step 4
+Now, lets jump into a bit of math.
+
+If we get the period of a function, the following equation must be true: 
+
+a<sup>r</sup> = 1 mod(N)
+
+This is becasue if the period is r = 4, then that means what ever the value is at 0, the same value of 1 is also given at r.
+
+Given our function, 2<sup>0</sup> = 1 mod(15) similar to how 2<sup>4</sup> = 1 mod(15) because that is when the function will repeat itself.
+
+If we then use perfect squares to expand our equation, this is where we land up.
+
+a<sup>r</sup> = 1 mod(N)
+
+a<sup>r</sup> - 1 = 0 mod(N)
+
+(a<sup>r/2</sup> - 1)(a<sup>r/2</sup> + 1) = 0 mod(N)
+
+If we sub in our values into this equation, we would find:
+
+(2<sup>4/2</sup> - 1)(2<sup>4/2</sup> + 1) = 0 mod(15)
+
+And when we futher simplify, we would get:
+
+(3)(5) = 0 mod(N)
+
+## Step 5
+But, we are not finished yet. It may seem like we are finished because we have the correct factors but we only got lucky because 15 is just a very simple number. The final step is actually finding the GCD of either of these numbers with N to finally find the prime factors of N.
+
+Euclidean GCDs:
+
+GCD(15, 5) = 5
+
+GCD(15, 3) = 3
+
+And there you have it. Using Euclid's algorithm, we can find the prime factors of any prime number N using Shor's algorithm in a more efficient way not requiring a very time complex method.
+
+## Step 6
+Decoding the message is the final step. I said all the way at the top that the equation to decode the RSA encrypted message is given by the following equation, 
 
 
 
@@ -130,7 +183,7 @@ Using Eulers theorem, we know that a<sup>(p-1)(q-1)</sup> = 1 mod(pq) or a<sup>(
 
 
 
-
+Making this problem into a period finding problem rather than a straight up factoring problem lies in the genius of this solution that Peter Shor came up with. Using the quantum technology to solve what humans are unable to solve is what makes this algorithm so cool and much better than current methods.
 
 
 
