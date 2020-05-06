@@ -95,12 +95,31 @@ First we have to figure out how many qubits we need. We need to find log<sub>2</
 The first portion of gates is pretty simple. You are just using Hadamard gates on all of the qubits in the top register, 2*n qubits or in our case 8 of our 18 qubits.
 
 ### Part 2 - Phase Estimation
-This is the middle part of the circuit where there are a bunch of control unitary opperator gates. So, lets jump into a bit of math.
+This is the middle part of the circuit where there are a bunch of control unitary opperator gates. This subroutine is also known as phase estimation.
+
+To make this super easy to understand, this part of the circuit just sets up a periodic function in the qubits to further manipulate in the following steps. 
+
+For a more complicated explanation involving some linear algebra, this is a quantum algorithm to estimate the phase or eigenvalue of a unitary operator. The unitary opperator we are attempting to find the eigenvalue of is the Shor's function using our input variables.
+
+This is a probabilistic algorithm which gives a correct answer with high probability and decreases the chance of faliure by repeating.
+
+Using the function, f(x) = 2<sup>x</sup> mod(15), you are given a periodic graph.
+
+
+
+
 
 Phi (φ), AKA Euler's totient function, is a greek letter that represents the "breakability of a number". The number of co-prime numbers to your original number. For prime numbers, the φ value is equal to the number minus 1. φ(7) = 7 - 1 = 6 (1, 2, 3, 4, 5, 6, ~~7~~).
 
 When we use this property with our number N, we know that it is made up of 2 prime numbers. This means the φ function is just 
 φ(N) = (p-1)(q-1) where p and q are just factors of N.
+
+Using Fermat's little theorem, we know that a<sup>p-1</sup> = 1 mod(p) for all primes p and integers of x such that p does not divide x.
+
+Using Eulers theorem, we know that a<sup>(p-1)(q-1)</sup> = 1 mod(pq) or a<sup>(p-1)(q-1)</sup> = 1 mod(N) for all primes p, q such that x is relatively prime to them.
+
+
+
 
 
 
