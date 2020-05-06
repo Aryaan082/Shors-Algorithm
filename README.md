@@ -15,7 +15,7 @@ As a preface, I can start by defining a bunch of variables:
 
 **N** = Public RSA encryptor
 
-**e** = Public RSA exponent
+**e** = Public RSA exponent where e is an odd number that does not share a factor with φ(N). AKA, (q-1)(p-1).
 
 **p** = RSA encryptor prime factor
 
@@ -63,15 +63,15 @@ Lets define the public keys and go through the RSA framework once.
 
 **N** = 15
 
-**e** = 4
+**e** = 7
 
 Private message: 
 
-**m** = 11
+**m** = 13
 
-c = 15<sup>4</sup> mod(15)
+c = 13<sup>7</sup> mod(15)
 
-c = 1
+c = 7
 
 This is the message your computer would craft and send to something like a bank to decode. Now lets figure out how to intercept this message with a quantum computer and find the message for ourselves.
 
@@ -160,36 +160,40 @@ GCD(15, 3) = 3
 And there you have it. Using Euclid's algorithm, we can find the prime factors of any prime number N using Shor's algorithm in a more efficient way not requiring a very time complex method.
 
 ## Step 6
-Decoding the message is the final step. I said all the way at the top that the equation to decode the RSA encrypted message is given by the following equation, 
+Decoding the message is the final step. I said all the way at the top that the equation to decode the RSA encrypted message is given by the following equation, m = c<sup>d</sup> mod(N), but the hard part is finding the d value.
 
-
-
-
-
+The d value is made up by a brand new concept called the phi fucntion so let me give you a shor lesson of the Euler's totient function if you don't already know about it.
 
 
 Phi (φ), AKA Euler's totient function, is a greek letter that represents the "breakability of a number". The number of co-prime numbers to your original number. For prime numbers, the φ value is equal to the number minus 1. φ(7) = 7 - 1 = 6 (1, 2, 3, 4, 5, 6, ~~7~~).
 
+
 When we use this property with our number N, we know that it is made up of 2 prime numbers. This means the φ function is just 
 φ(N) = (p-1)(q-1) where p and q are just factors of N.
 
-Using Fermat's little theorem, we know that a<sup>p-1</sup> = 1 mod(p) for all primes p and integers of x such that p does not divide x.
 
-Using Eulers theorem, we know that a<sup>(p-1)(q-1)</sup> = 1 mod(pq) or a<sup>(p-1)(q-1)</sup> = 1 mod(N) for all primes p, q such that x is relatively prime to them.
+Now to find the value of d, we will actually need to find the value of the toient function because the following is the equation of the d value:
+
+d = (k * φ(N) + 1) / e where k is an integer and e is an odd number that does not share a factor with φ(N).
+
+If we sub in our own values in this equation,
+
+d = (6 * (3 - 1)(5 - 1) + 1) / 7
+
+d = 7
+
+And finally, when I sub all of our values into the decrpyting equation:
+
+m = c<sup>d</sup> mod(N)
+
+m = 7<sup>7</sup> mod(15)
+
+m = 13
+
+And once again, there we have it. We have successfully managed to interfere with this simple RSA encrypted message and used the theory behind how a quantum computer would go about finding the factors to decrypt the message.
 
 
+Making this problem into a period finding problem rather than a straight up factoring problem lies in the genius of this solution that Peter Shor came up with. Using the quantum technology to solve what current computers are unable to solve is what makes this algorithm so cool and much better than current methods.
 
 
-
-
-
-Making this problem into a period finding problem rather than a straight up factoring problem lies in the genius of this solution that Peter Shor came up with. Using the quantum technology to solve what humans are unable to solve is what makes this algorithm so cool and much better than current methods.
-
-
-
-
-
-
-
-
-
+If you are interested in how to recreate this 
