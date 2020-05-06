@@ -1,5 +1,5 @@
 # Shors Algorithm
-In this repositroy, I want to take the oppertunity to describe Shor's algorithm, and the basics for how it works. This is a brief overview of the algorithm. 
+In this repositroy, I want to take the opportunity to describe Shor's algorithm, and the basics for how it works. This is a brief overview of the algorithm. 
 
 There is some code in this repository and the code is based on the paper called, "Circuit for Shor’s algorithm using 2n+3 qubits".
 
