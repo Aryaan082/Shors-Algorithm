@@ -1,14 +1,16 @@
 # Shors Algorithm
-In this repository, I want to take the opportunity to describe Shor's algorithm and the basics of how it works. This is a brief overview of the algorithm. 
+In this repository, I want to take the opportunity to describe Shor's algorithm and the basics concepts of how it works.
 
 There is some code in this repository and the code is based on the paper called, "Circuit for Shor’s algorithm using 2n+3 qubits".
 
-This is not my code. I was not able to write all the code for the algorithm by myself... it was too complicated. The code in this repository was the code I used to replicate Shor's algorithm on my jupyter notebook and I am sharing it so you can try it too!
+This is not my code. I was not able to write all the code for the algorithm by myself... the circuit was too complex. The code in this repository can be used to run Shor's algorithm on your own jupyter notebook and I am sharing it so you can try it too!
 
 # Problem
-RSA encryption is a method of encrypting messages provided two unique values for N and e. This encryption works by creating a 1-way function where encrypting is easy while decrypting becomes almost impossible. The security is based on the exponentially hard problem called factorization which takes advantage of bit-based computational capabilities.
+RSA encryption is a method of encrypting messages provided two public values of N and e (will explain later). This encryption works by creating a 1-way function where encrypting is easy while decrypting becomes almost impossible. The security is based on the exponentially hard problem of factorization which takes advantage of classical computational capabilities.
 
-By the way, this is a short description of the logic behind it which you can also check out in a [video](https://www.youtube.com/watch?v=zqS4w4SiJT0) I made. Check it out!
+Factorization on a classical computer like the one you are using right now would take exponential ammounts of time. As the number needed to be factored increases in size, the time needed increases as a exponential function. But with Shor's algorithm, the time complexity is polynomial which means it is a lot more scalable.
+
+By the way, this is a short description of the logic behind it if you want to check out a [video](https://www.youtube.com/watch?v=zqS4w4SiJT0) I made.
 
 ## Preface
 As a preface, I can start by defining a bunch of variables:
